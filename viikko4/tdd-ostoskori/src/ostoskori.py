@@ -7,7 +7,10 @@ class Ostoskori:
         # ostoskori tallettaa Ostos-oliota, yhden per korissa oleva Tuote
 
     def tavaroita_korissa(self):
-        pass
+        tulos = 0
+        for i in self.ostokset():
+            tulos += i.lukumaara()
+        return tulos
         # kertoo korissa olevien tavaroiden lukumäärän
         # eli jos koriin lisätty 2 kpl tuotetta "maito", tulee metodin palauttaa 2 
         # samoin jos korissa on 1 kpl tuotetta "maito" ja 1 kpl tuotetta "juusto", tulee metodin palauttaa 2 
@@ -29,6 +32,8 @@ class Ostoskori:
         # tyhjentää ostoskorin
 
     def ostokset(self):
-        pass
+        ostokset = []
+
+        return ostokset
         # palauttaa listan jossa on korissa olevat ostos-oliot
         # kukin ostos-olio siis kertoo mistä tuotteesta on kyse JA kuinka monta kappaletta kyseistä tuotetta korissa on
